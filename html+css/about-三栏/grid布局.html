@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            font-size: 30px;
+        }
+        .container .box1 {
+            background-color: rgb(239, 52, 41);
+        }
+        .container .box2 {
+            background-color: rgb(246, 143, 37);
+        }
+        .container .box3 {
+            background-color: rgb(75, 168, 70);
+        }
+        .container .box4 {
+            background-color: rgb(4, 118, 194);
+        }
+        .container .box5 {
+            background-color: rgb(192, 119, 175);
+        }
+        .container .box6 {
+            background-color: rgb(248, 210, 157);
+        }
+        .container .box7 {
+            background-color: rgb(180, 168, 127);
+        }
+        .container .box8 {
+            background-color: rgb(208, 228, 168);
+        }
+        .container .box9 {
+            background-color: rgb(77, 199, 236);
+        }
+
+        .container {
+            display: grid;
+            /* rows表示一行，但是却是行高（竖的） */
+            /* grid-template-rows: 100px 200px 100px; */
+            /* columns也反过来了 */
+            /* grid-template-columns: 100px 100px 100px; */
+            /* 使用repeat()简化 */
+            /* grid-template-columns: repeat(3, 100px); */
+            /* 也可以重复两个 */
+            /* grid-template-columns: repeat(3, 100px 200px); */
+        }
+
+        .container {
+            /* width: 540px; */
+
+            display: grid;
+            /* grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: repeat(auto-fill, 100px); */
+            /* grid-template-columns: repeat(auto-fit, 100px); */
+        }
+
+        .container {
+            /* width: 540px; */
+
+            display: grid;
+            /* grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: repeat(auto-fill, 100px); */
+            /* grid-template-columns: 150px 1fr 2fr; */
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 'a b c' 'd e f' 'g h i';
+            /* 如果某些区域不需要利用，则使用"点"（.）表示。 */
+            grid-template-areas: 'a . c' 'd . f' 'g . i';
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+        <div class="box7">7</div>
+        <div class="box8">8</div>
+        <div class="box9">9</div>
+    </div>
+</body>
+</html>

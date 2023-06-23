@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container  {
+            padding: 0 200px 0 200px;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .middle,
+        .left,
+        .right {
+            float: left;
+            height: 100px;
+        }
+
+        .middle {
+            width: 100%;
+            background-color: green;
+        }
+
+        .left {
+            background-color: red;
+            /* 100%是和父元素对比的 */
+            margin-left: -100%;
+            width: 200px;
+
+            position: relative;
+            left: -200px;
+        }
+
+        .right {
+            background-color: red;
+            margin-right: -200px;
+            width: 200px;
+
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="middle">中间</div>
+        <div class="left">左边</div>
+        <div class="right">右边</div>
+    </div>
+</body>
+</html>

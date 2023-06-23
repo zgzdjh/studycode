@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width:200px;
+            height: 200px;
+            border: 1px black solid;
+        }
+        .box div {
+            width:100px;
+            height: 100px;
+        }
+        .one {
+            background:gray;
+        }
+        .two {
+            background:orange;
+            /* 当设置class为two的div的margin-top为-50的时候，它的参考线是div.one的下边，整个div.two向上移动使得与参考线的距离减少50px。 */
+            margin-top:-50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="one">one</div>
+        <div class="two">two</div>
+    </div>
+</body>
+</html>
