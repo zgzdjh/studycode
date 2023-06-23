@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            float: left;
+            /* 设置参照点左右各占50% */
+            position: relative;
+            left: 50%;
+            /* 为了保证子元素正确显示，需要清除浮动 */
+            clear: both;
+        }
+
+        .container .item {
+            /* 将中点作为参照点 */
+            position: relative;
+            left: -50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="item">
+            使用float属性，记得清楚浮动
+        </div>
+
+    </div>
+</body>
+</html>
