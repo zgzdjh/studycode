@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 200px;
+            border: 1px solid red;
+
+            display: flex;
+            flex-flow: row nowrap;
+            /* justify-content: space-around; */
+        }
+
+        .container .item1 {
+            width: 100px;
+            border: 1px solid green;
+            margin-right: 50px;
+
+            float: left;
+        }
+
+        .container .item2 {
+            width: 100px;
+            border: 1px solid blue;
+            margin-left: 50px;
+
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+    </div>
+</body>
+</html>
