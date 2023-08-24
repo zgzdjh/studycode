@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function f1() {
+        //     console.log(this)
+        // }
+
+        // f1()
+
+        // let obj = {
+        //     chlid: {
+        //         say() {
+        //             console.log(this)
+        //         }
+        //     }
+        // }
+
+        // obj.chlid.say()
+
+        // "use strict";
+        let length = 4;
+        function callback() {
+            console.log(this)
+            console.log(this.length);
+        }
+
+        const obj2 = {
+            length: 5,
+            method(callback) {
+                callback();  // 这个是最后执行的函数
+            }
+        }
+
+        obj2.method(callback, 1, 2);
+    </script>
+</body>
+</html>
