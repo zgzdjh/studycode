@@ -11,3 +11,4 @@ const obj = {
 }
 
 obj.method(callback, 1, 2);
+
