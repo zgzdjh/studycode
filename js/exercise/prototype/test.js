@@ -21,3 +21,5 @@ console.log(fn.__proto__.getName === Fn.prototype.getName) // false => true
 //6，7
 console.log(fn.hasOwnProperty === Object.prototype.hasOwnProperty) // false => true
 console.log(fn.constructor === Fn) // true
+
+// 等学完面向对象精要，再回来理解
