@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>welcome</h1>
+    <div class="welcome">welcome</div>
+    <router-link to="/login">去登录</router-Link>
   </div>
 </template>
 
@@ -15,7 +16,7 @@ const count = ref(0)
 </script>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
+.welcome {
+  background-color: #f0f0f0;
 }
 </style>

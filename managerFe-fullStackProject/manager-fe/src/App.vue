@@ -8,4 +8,6 @@ import home from './components/home.vue'
 
 
 <style scoped>
+@import './assets/style/reset.css';
+@import './assets/style/index.scss';
 </style>

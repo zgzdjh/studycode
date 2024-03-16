@@ -1,0 +1,212 @@
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.aside-list {
+    background: rgba(255, 255, 255, 1);
+    padding-bottom: 20px;
+}
+
+.aside-headers {
+    margin: 0 36px auto;
+}
+
+.aside-title {
+    padding-top: 26px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #eeeeee;
+    width: 100%;
+    text-align: right;
+}
+
+.aside-mains {
+    margin: 26px 30px auto;
+    padding-bottom: 2rem;
+}
+
+.common-border {
+    height: 14px;
+    border: 0;
+    border-left: 3px solid #417ff6;
+    display: inline-block;
+    margin-right: 7px;
+    vertical-align: -3px;
+}
+
+.in-bl {
+    display: inline-block;
+}
+
+body {
+    margin: 0 !important;
+}
+
+.primary-btns {
+    padding-left: 19px;
+}
+
+.goods-num {
+    display: inline-block;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+#app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    font-size: 12px;
+}
+
+.tagClose >>> .el-icon-close {
+    position: absolute;
+    background-color: red;
+    top: -0.5rem;
+    right: -0.5rem;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    font-weight: bolder;
+    font-size: 11px;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.tagCloseNew >>> .el-icon-close {
+    position: absolute;
+    background: url('https://kybcrm-files.oss-cn-hangzhou.aliyuncs.com/prod/tesla/smart-scenic-v2-web/images/closecode.png');
+    top: 0rem;
+    right: 0rem;
+    color: #ffffff;
+    border-radius: 0 10% 0 0;
+    width: 24px;
+    height: 20px;
+    line-height: 13px;
+    font-weight: bolder;
+    font-size: 11px;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.tagCloseNew >>> .el-icon-close:hover {
+    position: absolute;
+    background: url('https://kybcrm-files.oss-cn-hangzhou.aliyuncs.com/prod/tesla/smart-scenic-v2-web/images/closecode.png');
+    top: 0rem;
+    right: 0rem;
+    color: #ffffff;
+    border-radius: 10%;
+    width: 24px;
+    height: 20px;
+    line-height: 13px;
+    font-weight: bolder;
+    font-size: 11px;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.tagCloseNew >>> .el-icon-close:before {
+    content: none;
+}
+
+.heardTitHome >>> .el-checkbox {
+    width: auto;
+    height: 2.5rem;
+    border: 1px solid #d2d2d2;
+    position: relative;
+    border-radius: 0.25rem;
+    text-align: center;
+    line-height: 2.5rem;
+    color: #333333;
+    font-weight: bold;
+    margin: 0 1rem 1rem 0;
+    padding: 0 20px 0 10px;
+}
+
+.heardTitHome >>> .el-checkbox__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.heardTitHome >>> .el-checkbox.is-checked {
+    background-color: #fff;
+    border-color: #417ff6;
+}
+
+.hotelRefuseTime >>> .el-checkbox {
+    width: auto;
+    height: 2.5rem;
+    border: 1px solid #d2d2d2;
+    position: relative;
+    border-radius: 0.4rem;
+    text-align: center;
+    line-height: 2.5rem;
+    color: #333333;
+    font-weight: bold;
+    margin: 0 2rem 1rem 0;
+    padding: 0 20px 0 10px;
+}
+
+.hotelRefuseTime >>> .el-checkbox__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.hotelRefuseTime >>> .el-checkbox.is-checked {
+    border-color: #417ff6;
+    background: url('https://kybcrm-files.oss-cn-hangzhou.aliyuncs.com/prod/tesla/smart-scenic-v2-web/images/yesBtn.png')
+        no-repeat 100% 100%;
+}
+
+.hotelRefuseTime >>> .el-checkbox.is-checked:before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url('https://kybcrm-files.oss-cn-hangzhou.aliyuncs.com/prod/tesla/smart-scenic-v2-web/images/yesBtn.png');
+    width: 1.8rem;
+    height: 1.5rem;
+    border-radius: 0.4rem;
+}
