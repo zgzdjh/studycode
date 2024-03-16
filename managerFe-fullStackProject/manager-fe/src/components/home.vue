@@ -19,10 +19,10 @@
 
 </script>
 
-<style lang="sass" scoped>
-.basic-layout {
+<style lang="scss" scoped>
+.basic-layout{
   position: relative;
-  .nav-side {
+  .nav-side{
     position: fixed;
     width: 200px;
     height: 100vh;

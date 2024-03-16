@@ -2,10 +2,9 @@
 // 完全达不到面筋哥的印象
 import { createRouter, createWebHashHistory } from "vue-router";
 import home from "../components/home.vue";
-import welcome from "../components/welcome.vue";
-import login from "../components/login.vue";
 
 const routeDataList = [
+    // 上面这个就是父子路由，想要加载welcome必须加载父路由home，实现home写目录，welcome写内容
     {
         name: 'home',
         path: '/',
@@ -18,26 +17,27 @@ const routeDataList = [
             {
                 name: 'welcome',
                 path: '/welcome',
-                component: welcome,
+                component: ()=>import('./../views/welcome.vue'),
                 meta: {
                     title: '欢迎页'
                 },
-            },
-            {
-                name: 'login',
-                path: '/login',
-                component: login,
-                meta: {
-                    title: '登录'
-                },
-            },
+            }
         ]
+    },
+    // 它外面就没有东西限制了
+    {
+        name: 'login',
+        path: '/login',
+        component: ()=>import('./../views/login.vue'),
+        meta: {
+            title: '登录'
+        },
     }
 ]
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routeDataList
+    routes : routeDataList
 })
 
 // 写成什么module的形式行不行,这样一个能控制浏览器跳转的router对象就创建出来了

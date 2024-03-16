@@ -7,7 +7,7 @@ import home from './components/home.vue'
 </script>
 
 
-<style scoped>
+<style>
 @import './assets/style/reset.css';
 @import './assets/style/index.scss';
 </style>
