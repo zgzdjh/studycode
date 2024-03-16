@@ -5,7 +5,7 @@ import home from "../components/home.vue";
 import welcome from "../components/welcome.vue";
 import login from "../components/login.vue";
 
-const routes = [
+const routeDataList = [
     {
         name: 'home',
         path: '/',
@@ -37,8 +37,8 @@ const routes = [
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes
+    routeDataList
 })
 
-// 写成什么module的形式行不行
+// 写成什么module的形式行不行,这样一个能控制浏览器跳转的router对象就创建出来了
 export default router
