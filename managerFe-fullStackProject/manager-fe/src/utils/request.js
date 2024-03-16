@@ -1,5 +1,5 @@
 /**
- * axios二次封装
+ * axios二次封装，为了兼容使用情况
  */
 import axios from 'axios'
 import config from './../config'
