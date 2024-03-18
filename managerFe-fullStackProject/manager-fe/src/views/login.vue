@@ -1,16 +1,18 @@
 <template>
   <div class="login-wrapper">
     <div class="modal">
-      <el-form ref="userFrom" :modal="formData" status-icon :rules="rules">
-        <div class="title">火星</div>
+      <el-form :model="formData" :rules="rules" ref="formData">
+        <div class="title">登录</div>
         <el-form-item prop="userName">
-          <el-input type="text" pre-icon="el-icon-user" v-model="formData.userName"/>
+          <el-input type="text" v-model="formData.userName"></el-input>
+          <!-- <el-input type="text" :prefix-icon="User" v-model="formData.userName"/> -->
         </el-form-item>
         <el-form-item prop="userPwd">
-          <el-input type="password" pre-icon="el-icon-view" v-model="formData.userPwd"/>
+          <el-input type="password" v-model="formData.userPwd"></el-input>
+          <!-- <el-input type="password" :prefix-icon="View" v-model="formData.userPwd"/> -->
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" class="btn-login" @click="submit">登录</eL-button>
+          <el-button type="primary" class="btn-login" @click="submitForm()">登录</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -18,6 +20,10 @@
 </template>
 
 <script>
+// 暂时有点问题，但大差不差就是这么用的，去官网上磨一磨就好了
+// import { User, View } from '@element-plus/icons-vue'
+import { login } from '@/api/users/index'
+
 export default {
   name: 'login',
   data() {
@@ -28,26 +34,26 @@ export default {
       },
       rules: {
         userName: [
-          { required:true, message:"请输入用户名", trigger:"blur" }
+          { required: true, message: '请输入活动名称', trigger: 'blur' }
         ],
         userPwd: [
-          { required:true, message:"请输入用户", trigger: "blur" }
-        ]
+          { required: true, message:"请输入用户", trigger: "blur" }
+        ],
       }
     }
   },
   methods: {
-    submit() {
-      this.$refs.userFrom.validate((valid) => {
+    submitForm() {
+      this.$refs.formData.validate((valid) => {
         if (valid) {
-          // 发送请求，研究一下56项目是怎么发送请求的！我没有做全局引入
-          this.$api.login(this.formData).then((res)=> {
-            return
+          login(this.formData).then((res)=> {
             this.$store.commit('saveUserInfo')
             this.$router.push('/welcome')
+          }).catch(err => {
+            console.log('err', err)
           })
         }
-      })
+      });
     }
   }
 }

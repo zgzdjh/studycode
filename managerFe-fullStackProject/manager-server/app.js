@@ -5,8 +5,9 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
-const index = require('./routes/index')
 const users = require('./routes/users')
+const router = require('koa-router')()
+const log4js = require('./utils/log4js')
 
 // error handler
 onerror(app)
@@ -32,11 +33,13 @@ app.use(async (ctx, next) => {
   await next()
   const ms = new Date() - start
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
+  log4js.info(`log output`)
 })
 
 // routes
-app.use(index.routes(), index.allowedMethods())
-app.use(users.routes(), users.allowedMethods())
+router.prefix("/api")
+router.use(users.routes(), users.allowedMethods())
+app.use(router.routes(), router.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {

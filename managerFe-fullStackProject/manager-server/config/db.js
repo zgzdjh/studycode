@@ -3,12 +3,13 @@
  */
 const mongoose = require('mongoose')
 const config = require('./index')
-const log4js = require('./../utils/log4j')
+const log4js = require('./../utils/log4js')
 
-mongoose.connect(config.URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+// 官方给的连接方式
+main().catch(err => console.log(err));
+async function main() {
+  await mongoose.connect(config.URL);
+}
 
 const db = mongoose.connection;
 

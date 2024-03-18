@@ -3,12 +3,12 @@
  * 日志存储
  * @author JackBean
  */
-const log4js = require('koa-log4js')
+const log4js = require('log4js')
 
 const levels = {
     'trace': log4js.levels.TRACE,
     'debug': log4js.levels.DEBUG,
-    'info': log4js.Levels.INFO,
+    'info': log4js.levels.INFO,
     'warn': log4js.levels.WARN,
     'error': log4js.levels.ERROR,
     'fatal': log4js.levels.FATAL,
@@ -49,7 +49,7 @@ log4js.configure({
  */
 exports.debug = (content) => {
     let logger = log4js.getLogger('debug');
-    logger.Level = levels.debug;
+    logger.level = levels.debug;
     logger.debug(content);
 }
 
@@ -59,7 +59,7 @@ exports.debug = (content) => {
  */
 exports.info = (content) => {
     let logger = log4js.getLogger('info');
-    logger.Level = levels.info;
+    logger.level = levels.info;
     logger.info(content);
 }
 
@@ -69,6 +69,6 @@ exports.info = (content) => {
  */
 exports.error = (content) => {
     let logger = log4js.getLogger('error');
-    logger.Level = levels.error;
+    logger.level = levels.error;
     logger.error(content);
 }

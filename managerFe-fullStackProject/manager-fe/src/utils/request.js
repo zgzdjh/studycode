@@ -27,7 +27,7 @@ service.interceptors.response.use((responseUse) => {
     const { code, data, msg } = responseUse.data;
     if (code===200) {
         return data;
-    } else if (code ===40001) {
+    } else if (code ===50001) {
         ElMessage.error(TOKEN_INVALID)
         setTimeout(() => {
             router.push('./login')
@@ -46,7 +46,7 @@ service.interceptors.response.use((responseUse) => {
  */
 function request(options) {
     options.method = options.method || 'get'
-
+    
     // 意义不明，这个options.params和options.data不一样嘛？
     if (options.method.toLowerCase() === 'get') {
         options.params = options.data;

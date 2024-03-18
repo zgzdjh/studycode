@@ -7,7 +7,7 @@ import config from "../config";
 export default {
     setItem(k, v) {
         let storage = this.getstroage();
-        storage[k] = val;
+        storage[k] = v;
         // 这个东西应该不是新增吧，那不是后面的将前面的覆盖了？
         window.localStorage.setItem(config.namespace,JSON.stringify(storage))
     },

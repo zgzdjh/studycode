@@ -4,22 +4,22 @@
 // 可能获取不到，这也许就是独立模块的意义吧
 const env = import.meta.env.MODE || 'prod'
 const EnvConfig = {
-    dev: {
-        baseApi: '/',
+    development: {
+        baseApi: '/api',
         mockApl: ''
     },
     fat: {
-        baseApi: '/',
+        baseApi: '',
         mockApl: ''
     },
     prod: {
-        baseApi: '/',
+        baseApi: '',
         mockApl: ''
     },
 }
 export default {
     env,
-    mock: true,
+    mock: false,
     ...EnvConfig[env],
     namespace: 'manager'
 }
