@@ -1,3 +1,6 @@
+/**
+ * 用户管理模块
+ */
 const router = require('koa-router')()
 
 router.prefix('/users')
