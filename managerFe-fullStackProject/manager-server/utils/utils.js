@@ -8,7 +8,7 @@ const CODE = {
     USER_ACC0UNT_ERR0R: 20001,//账号或密码错误
     USER_L0GIN_ERR0R: 30001,//用户未登录
     BUSINESS_ERR0R: 40001,//业务请求失败
-    AUTH_ERR0R: 500001,//认证失败或T0KEN过期
+    AUTH_ERR0R: 50001,//认证失败或T0KEN过期
 }
 
 module.exports = {
@@ -29,17 +29,18 @@ module.exports = {
         },
         skipIndex
     },
+    // 这么写也太不靠谱了，这好像不对吧
     success(data='',msg='',code=CODE.SUCCESS){
         log4js.debug(data)
         return {
             code,data,msg
         }
     },
-    fail(msg='',data='',code=CODE.BUSINESS_ERR0R){
+    fail(msg='',code=CODE.BUSINESS_ERR0R,data=''){
         log4js.debug(msg)
         return {
             code,data,msg
         }
-    }
-
+    },
+    CODE: CODE
 }
