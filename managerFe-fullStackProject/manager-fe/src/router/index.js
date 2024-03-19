@@ -9,6 +9,7 @@ const routeDataList = [
         name: 'home',
         path: '/',
         component: home,
+        // 用于面包屑和路由守卫中控制网页的标题
         meta: {
             title: '首页'
         },
@@ -16,6 +17,7 @@ const routeDataList = [
         children: [
             {
                 name: 'welcome',
+                // 加上/就变成了一个绝对地址了
                 path: '/welcome',
                 component: ()=>import('./../views/welcome.vue'),
                 meta: {
