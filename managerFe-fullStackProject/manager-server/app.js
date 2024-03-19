@@ -29,11 +29,13 @@ app.use(views(__dirname + '/views', {
 
 // logger
 app.use(async (ctx, next) => {
+  // 服务端日志，方便前端请求查看
+  log4js.info(`get params:${JSON.stringify(ctx.request.query)}`)
+  log4js.info(`post params:${JSON.stringify(ctx.request.body)}`)
   const start = new Date()
   await next()
   const ms = new Date() - start
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
-  log4js.info(`log output`)
 })
 
 // routes

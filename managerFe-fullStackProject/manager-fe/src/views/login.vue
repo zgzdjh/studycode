@@ -4,11 +4,11 @@
       <el-form :model="formData" :rules="rules" ref="formData">
         <div class="title">登录</div>
         <el-form-item prop="userName">
-          <el-input type="text" v-model="formData.userName"></el-input>
+          <el-input type="text" prefix-icon="User" v-model="formData.userName"></el-input>
           <!-- <el-input type="text" :prefix-icon="User" v-model="formData.userName"/> -->
         </el-form-item>
         <el-form-item prop="userPwd">
-          <el-input type="password" v-model="formData.userPwd"></el-input>
+          <el-input type="password" prefix-icon="View" v-model="formData.userPwd"></el-input>
           <!-- <el-input type="password" :prefix-icon="View" v-model="formData.userPwd"/> -->
         </el-form-item>
         <el-form-item>
@@ -20,8 +20,6 @@
 </template>
 
 <script>
-// 暂时有点问题，但大差不差就是这么用的，去官网上磨一磨就好了
-// import { User, View } from '@element-plus/icons-vue'
 import { login } from '@/api/users/index'
 
 export default {
@@ -47,7 +45,7 @@ export default {
       this.$refs.formData.validate((valid) => {
         if (valid) {
           login(this.formData).then((res)=> {
-            this.$store.commit('saveUserInfo')
+            this.$store.commit('saveUserInfo', res)
             this.$router.push('/welcome')
           }).catch(err => {
             console.log('err', err)
